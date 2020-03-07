@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="./scripts/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="./scripts/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <script src="./scripts/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <script src="./scripts/client.js"></script>
+    <link rel="stylesheet" href="./scripts/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
     <title>JQuery Salary Calculator</title>
 </head>
+<header id = "mainHeader">
+    <h1>JQuery Monthly Salary Calculator</h1>
+</header>
 <body>
+    <h2 id= "addTitle">Add An Employee</h2>
+    <form class = "inputForm">
+        <input type="text" placeholder="First Name" id="fname" name="firstName">
+        <input type="text" placeholder="Last Name" id="lname" name="lastname">
+        <input type="text" placeholder="ID Number" id="idNum" name="idNumber">
+        <input type="text" placeholder="Title" id="eeTitle" name="employeeTitle">
+        <input type="number" placeholder="Salary Amount" id="eeSalary" name="employeeSalary" >
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+    <p id = "employeeOutput">
+       <ul id = "list-employee">
+           <!--- JQ filled by JS file-->
+       </ul>
+    </p>
+
     
 </body>
 </html>
