@@ -2,14 +2,29 @@ console.log('JS');
 
 $( document ).ready( readyNow )
 
+let employeeData = [];
+
     function readyNow(){
         console.log('JQ');
 
-let employeeData = [];
-   
+function appendEmployeeToDom(){
+let tableEntry = $('#employeeTable');
 
-function addEmployee(){
+tableEntry.empty();
 
+for ( item of employeeDtata){
+    let $td= $('
+    <tr>
+    <td>${item.firstName}</td>
+    <td>${item.lastName}</td>
+    <td>${item.idNumber}</td>
+    <td>${item.employeeTitle}</td>
+    <td>${item.employeeSalary}</td>
+    </tr>'
+    );
+
+    tableEntry.append($td);
+}
    
 }
 
