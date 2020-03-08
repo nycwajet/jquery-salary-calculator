@@ -8,6 +8,13 @@ let employeeData = [{firstName, lastName, idNumber, employeeTitle, employeeSalar
         console.log('JQ');
 
 
+$('.inputForm').click(function(addEmployee){
+    let $item = $(this).closest('tr')
+                       .find('.nr')
+                       .text();
+        $(this).append($item);
+})
+
 $('#btn-submit').on('click', addEmployee);
 $('#employeeTable').on('click', '#btn-delete', deleteEmployee);
 
@@ -18,8 +25,8 @@ let tableEntry = $('#employeeTable');
 
 tableEntry.empty();
 
-for ( item of employeeData){
-    let $td= $('
+for (item of employeeData){
+    let $td=$('
     <tr>
     <td>${item.firstName}</td>
     <td>${item.lastName}</td>
