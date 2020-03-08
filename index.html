@@ -17,7 +17,7 @@
 </header>
 <body>
     <h2 id= "addTitle">Add An Employee</h2>
-    <form id = "inputForm">
+    <form class = "inputForm">
         <input type="text" placeholder="First Name" id="fname" name="firstName">
         <input type="text" placeholder="Last Name" id="lname" name="lastname">
         <input type="text" placeholder="ID Number" id="idNum" name="idNumber">
@@ -28,15 +28,18 @@
       </form>
     <p id = "employeeOutput">
         <h3>Employees</h3>
-      <table id="employeeTable" class= "table table-striped table-bordered" cellspacing="0" width="100%">
+      <table cellspacing="0" width="100%">
           <thead>
               <tr>
-                  <th class="th-sm">First Name</th>
-                  <th class="th-sm">Last Name</th>
-                  <th class="th-sm">ID Number</th>
-                  <th class="th-sm">Title</th>
-                  <th class="th-sm">Salary Amount</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>ID Number</th>
+                  <th>Title</th>
+                  <th>Salary Amount</th>
               </tr>
+              <tbody id = employeeTable>
+
+              </tbody>
           </thead>
          </table>
     </p>

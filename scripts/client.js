@@ -8,14 +8,9 @@ $( document ).ready( readyNow )
 let employeeData = [];
    
 
-function addEmployee(employeeData){
-    if ($ ("#empoyeeTable").val() != null && $("#employeeTable").val() != ''){
-      //add employee to table
-      employeeAddToTable();
-      formClear();
-      $("employeeTable").focus();
+function addEmployee(){
 
-    }
+   
 }
 
 
