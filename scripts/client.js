@@ -1,54 +1,79 @@
-console.log('JS');
-
-$( document ).ready( readyNow )
+console.log('In JS');
 
 
+$(document).ready(readyNow)
 
+let employees = [];
 
-appendEmployeeToDom();
-$('#btn-submit').on('click', addEmployee);
-$('#employeeTable').on('click', '#btn-delete', deleteEmployee);
+function readyNow(){
+  console.log('in JQ');
+  $('#btn-submit').on('click', AddEmployee)
+  $('#employeeTableOut').on('click', 'delete', removeRow);
+}
+function addEmployee(event){
+console.log('in addEmployee');
+event.preventDefault();
 
-let employeeData = [{firstName, LastName, idNumber, employeeTitle, employeeSalary}];
+let firstNameInput= $('#fNameInput').val();
+let lastNameInput= $('#lNameInput').val();
+let idInput= $('#idNumInput').val();
+let titleInput= $('#eeTitleInput').val();
+let salaryInput=$('#eeSalaryInput').val();
 
+employee.push({firstNameInput,lastNameInput,idInput,titleInput,salaryInput});
+console.log('employees array is: ',employees);
 
-    function readyNow(){
-        console.log('JQ');
+employeeData();
 
-        function handleClick(event){
-            event.preventDefault();
-            let employeeData = $('.inputForm').val().toUpperCase();
-            $('.inputForm').val('');
+$('#fNameInput').val('');
+$('#lNameInput').val('');
+$('#idNumInput').val('');
+$('#eeTitleInput').val('');
+$('#eeSalaryInput').val('');
 
-    console.log('Go inputs ', name, type);
-
-    addPet(name, type);
-    console.log('All Pets ', petList);
-
-        }
-
-
-   function addEmployee(firstName, lastName, idNumber, employeeTitle, employeeSalary){
-    console.log('in addEmployee');
-    document.getElementById('inputForm');
-   let employeeData = {firstName, lastName, idNumber, employeeTitle, employeeSalary};
-   console.log('New employee is', employee);
-   employeeData.push(employee);
 }
 
+function employeeData(){
+console.log('in employeeData');
+$('#employeeTableOut').empty();
 
-function appendEmployeeToDom(){
-    console.log('in append to DOM');
-let tableEntry = $('#employeeTable');
-tableEntry.empty();
+for(let employee of employees){
+
+
+  const row = '<tr>
+  <td>${employee.fNameInput}</td>
+  <td>${employee.lNameInput}</td>
+  <td>${employee.idNumInput}</td>
+  <td>${employee.eeTitleInput}</td>
+  <td>${employee.eeSalaryInput}</td>
+  <td><button class= "button" id= "${employee.idNumInput}">Delete</button></td>
+  </tr>' ;
+
+  $('#employeeTableOut').append(row);
 }
 
+monthlySalary = eeSalaryInput/12;
+$('#monthlyCost').empty();
+$('#monthlyCost').append(monthlySalary);
 
-employeeData.push({ 'Henry', 'Marin', 12345, 'Who knows', 22000 });
-employeeData.push({ 'John', 'Doe', 12346, 'Consultat', 42000 });
-employeeData.push({ 'Maria', 'Hill', 00000, 's.h.i.e.l.d. agent', 22000 });
+if (totalMonthly > 20000) {
+  monthlyStyle = 'red';
+  
+}
+
+function removeRow(event){
+  $(this).parent().parent().remove();
+
+  const employeeId = S(this).attr('id');
+  for (let i = 0 ; i < employees.length; i++){
+    if(employe[i].idInput === employeeId){
+      employees.splice(i,1);
+    }
+
+  }
+  console.log('Employees[] is ', employees);
+  displayEMployees();
 
 }
-   
 
 

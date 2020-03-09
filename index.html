@@ -17,18 +17,18 @@
 </header>
 <body>
     <h2 id= "addTitle">Add An Employee</h2>
-    <form class = "inputForm">
-        <input type="text" placeholder="First Name" id="fName" name="firstName">
-        <input type="text" placeholder="Last Name" id="lName" name="lastname">
-        <input type="text" placeholder="ID Number" id="idNum" name="idNumber">
-        <input type="text" placeholder="Title" id="eeTitle" name="employeeTitle">
-        <input type="number" placeholder="Annual Salary" id="eeSalary" name="employeeSalary" >
+    <form id = "employeeInputForm">
+        <input type="text" placeholder="First Name" id="fNameInput" name="firstName">
+        <input type="text" placeholder="Last Name" id="lNameInput" name="lastname">
+        <input type="text" placeholder="ID Number" id="idNumInput" name="idNumber">
+        <input type="text" placeholder="Title" id="eeTitleInput" name="employeeTitle">
+        <input type="number" placeholder="Annual Salary" id="eeSalaryInput" name="employeeSalary" >
         <br>
-        <input type="button" value="Submit" id="btn-submit" onclick="addEmployee();">
+        <button type="submit" id="btn-submit" >Submit</button>
       </form>
-    <p id = "employeeOutput">
+    <section id = "employeeOutput">
         <h3>Employees</h3>
-      <table cellspacing="0" width="100%">
+      <table id="employeeTable"  cellspacing="0" width="100%">
           <thead>
               <tr>
                   <th>First Name</th>
@@ -36,13 +36,14 @@
                   <th>ID Number</th>
                   <th>Title</th>
                   <th>Annual Salary</th>
+                  <th></th>
               </tr>
-              <tbody id = employeeTable>
+              <tbody id = "employeeTableOut">
 
               </tbody>
           </thead>
          </table>
-    </p>
+        </section>
 
     
 </body>
