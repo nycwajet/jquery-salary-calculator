@@ -30,6 +30,7 @@ let employeeData = [{firstName, LastName, idNumber, employeeTitle, employeeSalar
 
    function addEmployee(firstName, lastName, idNumber, employeeTitle, employeeSalary){
     console.log('in addEmployee');
+    document.getElementById('inputForm');
    let employeeData = {firstName, lastName, idNumber, employeeTitle, employeeSalary};
    console.log('New employee is', employee);
    employeeData.push(employee);
