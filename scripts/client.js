@@ -9,7 +9,7 @@ appendEmployeeToDom();
 $('#btn-submit').on('click', addEmployee);
 $('#employeeTable').on('click', '#btn-delete', deleteEmployee);
 
-let employeeData = [];
+let employeeData = [{firstName, LastName, idNumber, employeeTitle, employeeSalary}];
 
 
     function readyNow(){
@@ -42,6 +42,10 @@ let tableEntry = $('#employeeTable');
 tableEntry.empty();
 }
 
+
+employeeData.push({ 'Henry', 'Marin', 12345, 'Who knows', 22000 });
+employeeData.push({ 'John', 'Doe', 12346, 'Consultat', 42000 });
+employeeData.push({ 'Maria', 'Hill', 00000, 's.h.i.e.l.d. agent', 22000 });
 
 }
    
