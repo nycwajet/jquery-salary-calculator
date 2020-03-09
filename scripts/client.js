@@ -15,6 +15,18 @@ let employeeData = [];
     function readyNow(){
         console.log('JQ');
 
+        function handleClick(event){
+            event.preventDefault();
+            let employeeData = $('.inputForm').val().toUpperCase();
+            $('.inputForm').val('');
+
+    console.log('Go inputs ', name, type);
+
+    addPet(name, type);
+    console.log('All Pets ', petList);
+
+        }
+
 
    function addEmployee(firstName, lastName, idNumber, employeeTitle, employeeSalary){
     console.log('in addEmployee');
@@ -29,13 +41,9 @@ function appendEmployeeToDom(){
 let tableEntry = $('#employeeTable');
 tableEntry.empty();
 }
+
+
 }
    
-
-
-
-
-
-}
 
 
