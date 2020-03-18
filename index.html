@@ -12,11 +12,13 @@
 
     <title>JQuery Salary Calculator</title>
 </head>
-<header id = "mainHeader">
-    <h1>JQuery Monthly Salary Calculator</h1>
-</header>
 <body>
-    <h2 id= "addTitle">Add An Employee</h2>
+    <header id = "mainHeader">
+        <h1>JQuery Monthly Salary Calculator</h1>
+    </header>
+
+    <h2 id= "addEmployee">Add An Employee</h2>
+
     <form id = "employeeInputForm">
         <input type="text" placeholder="First Name" id="fNameInput" name="firstName">
         <input type="text" placeholder="Last Name" id="lNameInput" name="lastname">
@@ -26,9 +28,11 @@
         <br>
         <button type="submit" id="btn-submit"  >Submit</button>
       </form>
-    <section id = "employeeOutput">
+
+    <section id = "employeeOutput" class= "push">
         <h3>Employees</h3>
-      <table id="employeeTable"  cellspacing="0" width="100%">
+
+      <table id= "employeeTable"  cellspacing="0">
           <thead>
               <tr>
                   <th>First Name</th>
@@ -43,6 +47,10 @@
               </tbody>
           </thead>
          </table>
+         <h4 >Total Monthly Salary</h4>
+             <span id = "monthlyTotal">
+
+             </span>
         </section>
 
     

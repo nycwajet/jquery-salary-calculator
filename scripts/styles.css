@@ -3,7 +3,28 @@
     color: #000000;
     padding: 20px;
 }
+#addEmployee{
+   text-align: left, center;
+}
 
 #addTitle{
     padding: 5px;
+}
+
+#employeeTable{
+    width: 100%;
+    background-color: rgb(161, 152, 152);
+}
+
+#btn-submit{
+    padding: 5px;
+    margin: 3px;
+}
+
+#employeeInputForm{
+    margin: 5px;
+}
+
+#employeeTable{
+    margin: 5px;
 }
