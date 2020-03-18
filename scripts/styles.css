@@ -4,7 +4,7 @@
     padding: 20px;
 }
 #addEmployee{
-   text-align: left, center;
+   text-align: center;
 }
 
 #addTitle{
@@ -27,4 +27,9 @@
 
 #employeeTable{
     margin: 5px;
+}
+
+#monthlyTotal{
+   font-size: 50px;
+margin: 25px;
 }

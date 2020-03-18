@@ -64,7 +64,9 @@ function calculateMonthly(){
   }
   total = total/12;
   console.log(total);
+  $('#monthlyTotal').empty();
   $('#monthlyTotal').append(total);
+
 }
 
 function removeRow(){
@@ -74,8 +76,8 @@ function removeRow(){
   for (let i = 0 ; i < employees.length; i++){
     if(employees[i].idInput === idInput){
       employees.splice(i,1);
+      $('#monthlyTotal').empty();
     }
-
-  }
+}
 }
 
